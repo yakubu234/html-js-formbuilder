@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <title>Form Builder</title>
+  <meta name="description" content="">
+  <!-- Bootstrap added script -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="ext_libs/css/vendor.css" />
+  <link rel="stylesheet" href="ext_libs/css/formbuilder.css" />
+
+  <!-- Bootstrap added script -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/icheck/1.0.2/skins/flat/_all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css" />
+
+  <link rel="stylesheet" href="ext_libs/css/styles.css" />
+  <!-- added script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js" integrity="sha256-pXtSQrmprcTB74RsNlFHuJxHK5zXcPrOMx78uWU0ayU=" crossorigin="anonymous"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <style>
+ 
+ 
+  </style>
+</head>
+<body>
+
+  <!-- <div class="container-fb-main"> -->
+    <div class='fb-main '></div>
+  <!-- </div> -->
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+<script src="ext_libs/js/vendor.js"></script>
+  <script src="ext_libs/js/formbuilder.js"></script>
+
+  <script>
+    $(function(){
+      fb = new Formbuilder({
+        selector: '.fb-main',
+        bootstrapData: [
+          {
+            "label": "Please enter your clearance number",
+            "field_type": "text",
+            "required": true,
+            "field_options": {},
+            "cid": "c6"
+          },
+        ]
+      });
+
+      fb.on('save', function(payload){
+        console.log(payload);
+      })
+    });
+  </script>
+
+</body>
+</html>
